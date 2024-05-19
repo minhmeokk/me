@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>PayloadContent</key>
+<array>
+
+<dict>
+       <key>DNSSettings</key>
+       <dict>
+       <key>DNSProtocol</key>
+       <string>HTTPS</string>
+       <key>ServerURL</key>
+	<string>https://4u8v2a9299.cloudflare-gateway.com/dns-query</string>
+	</dict>
+	<key>PayloadDisplayName</key>
+	<string>Off AntiHost LQM</string>
+	<key>PayloadIdentifier</key>
+	<string>1111111</string>
+	<key>PayloadType</key>
+        <string>com.apple.dnsSettings.managed</string>
+	<key>PayloadUUID</key>
+	<string>1111111</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+
+<dict>
+       <key>DNSSettings</key>
+       <dict>
+       <key>DNSProtocol</key>
+       <string>HTTPS</string>
+       <key>ServerURL</key>
+	<string>https://g1fx8yzgy3.cloudflare-gateway.com/dns-query</string>
+	</dict>
+	<key>PayloadDisplayName</key>
+	<string>Antiban Host LQ </string>
+	<key>PayloadIdentifier</key>
+	<string>2222222</string>
+	<key>PayloadType</key>
+        <string>com.apple.dnsSettings.managed</string>
+	<key>PayloadUUID</key>
+	<string>2222222</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+
+</array>
+<key>PayloadDescription</key>
+<string>
+- DNS này có tác dụng chống ban acc 1 phần.
+- Mỗi lần muốn sử dụng thì hãy vào đến sảnh rồi bật Antiban Host LQM.
+- Không hoạt động khi bật VPN.
+- Vì đây là Antiban Host nên không kì vọng nhiều.
+- Beta Test và anti này không giúp cân report, chỉ hỗ trợ 1 phần cho Offset.
+Bất kì hành vi sao chép khi chưa có sự cho phép dễ dẫn đến url antiban bị khóa:v
+From Sylphin and Weans.
+</string>
+<key>PayloadDisplayName</key>
+<string>Antiban LQM By Sylphin and Weans</string>
+<key>PayloadIdentifier</key>
+<string>Sylphin</string>
+<key>PayloadRemovalDisallowed</key>
+<false/>
+<key>PayloadScope</key>
+<string>User</string>
+<key>PayloadType</key>
+<string>Configuration</string>
+<key>PayloadUUID</key>
+<string>00000000</string>
+<key>PayloadVersion</key>
+<integer>1</integer>
+</dict>
+</plist>

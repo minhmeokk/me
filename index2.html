@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styles */
+        .header {
+            background-image: url('https://images5.alphacoders.com/131/1311994.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .header-title {
+            font-size: 3rem;
+        }
+
+        .typing-text {
+            color: #000;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid transparent;
+            animation: typing 4s steps(25) forwards;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+                border-right-color: transparent;
+            }
+            95% {
+                width: 100%;
+                border-right-color: #fff;
+            }
+            100% {
+                width: 100%;
+                border-right-color: #fff;
+            }
+        }
+
+        /* Menu Icon Styles */
+        .menu-icon {
+            background-image: url('https://github.com/WeansHHN/me/blob/main/mikunakano.png?raw=true');
+            background-size: 70px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            background-color: #6bc4ffb4;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        /* Popup Menu Styles */
+        .popup-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .popup-header {
+            position: relative;
+        }
+
+        .close-button {
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .popup-links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            margin-right: 20px;
+        }
+
+        .popup-links a {
+            color: #fff;
+            font-size: 17px;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+
+        /* About Section Styles */
+        .about {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-title {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .about-description {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        /* Contact Section Styles */
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .icon-container {
+            margin-top: 20px;
+        }
+
+        .icon-container a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #070707;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .icon-container a:hover {
+            color: #66a0f89a;
+        }
+
+        /* Tab Styles */
+        .tab-button {
+            cursor: pointer;
+            background-color: #7a7a7a;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        /* Logo Styles */
+        .logo {
+            position: absolute;
+            top: -2px;
+            right: 20px;
+            width: 80px;
+            height: auto;
+        }
+
+        /* Châm Ngôn Sống Styles */
+        .owl-carousel .item {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Additional Styles */
+        .texth2 {
+            font-size: 15px;
+            margin-bottom: -10px;
+            color: #6bb0ff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .texth1hhnios {
+            font-size: 100%;
+            margin-bottom: -10px;
+            color: #ff6b6b;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.404);
+        }
+    </style>
+
+<style>
+    :root {
+    --background-light: #f5f5f5; /* Màu nền chế độ sáng */
+    --text-light: #000; /* Màu chữ chế độ sáng */
+    --background-dark: #333; /* Màu nền chế độ tối */
+    --text-dark: #fff; /* Màu chữ chế độ tối */
+}
+
+    /* CSS cho chế độ sáng */
+    body.light-mode {
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    /* CSS cho chế độ tối */
+    body.dark-mode {
+        background-color: #333;
+        color: #000000;
+    }
+
+    .header {
+        /* Định nghĩa background image trong chế độ sáng */
+        background-image: url('https://images5.alphacoders.com/131/1311994.jpeg');
+        /* Các thuộc tính CSS khác cho phần header */
+    }
+    
+    .mode-toggle {
+    position: fixed;
+    top: 90%;
+    right: 20px;
+    z-index: 1;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px; /* Đảm bảo kích thước chiều rộng và chiều cao bằng nhau */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mode-toggle:hover {
+    background-color: #666;
+}
+
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Điều chỉnh kích thước chiều rộng */
+    height: 40px; /* Điều chỉnh kích thước chiều cao */
+    border-radius: 50%; /* Biểu tượng tròn */
+    background-color: var(--background-light); /* Màu nền chế độ sáng */
+    color: var(--text-light); /* Màu biểu tượng chế độ sáng */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Hiệu ứng màu nền và màu chữ */
+}
+
+.mode-toggle:hover {
+    background-color: var(--background-dark); /* Màu nền khi di chuột qua chế độ tối */
+    color: var(--text-dark); /* Màu biểu tượng khi di chuột qua chế độ tối */
+}
+
+.mode-toggle i {
+    font-size: 20px; /* Điều chỉnh kích thước của biểu tượng */
+}
+    
+
+
+
+</style>
+</head>
+<body class="light-mode">
+    <div class="mode-toggle" onclick="toggleMode()">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <!-- Menu Icon -->
+    <div class="menu-icon" style="color: #ffffffc9;" onclick="toggleMenu()">&#9776;</div>
+
+    <!-- Popup Menu -->
+    <div class="popup-menu" id="popupMenu">
+        <div class="popup-header">
+            <a href="#" class="close-button" onclick="closeMenu()">&#10006;</a>
+        </div>
+        <div class="popup-links">
+            <a href="#" onclick="scrollToSection('header')">Trang chủ</a>
+            <a href="#" onclick="scrollToSection('about')">Giới thiệu về bản thân</a>
+            <a href="#" onclick="scrollToSection('comment')">Ae cấp 3 nói về tính cách</a>
+            <a href="#" onclick="scrollToSection('playlist')">Danh sách nhạc</a>
+            <a href="#" onclick="scrollToSection('chamngon')">Châm ngôn sống</a>
+            <a href="#" onclick="scrollToSection('contact')">Liên hệ</a>
+        </div>
+    </div>
+
+    <!-- Logo -->
+    <a href="https://hhnios.site">
+        <img src="https://github.com/WeansHHN/me/blob/main/7F0CA0EC-2686-4ED5-BB7A-DA1E588065DA.png?raw=true" alt="Logo" class="logo">
+    </a>
+
+    <!-- Header Section -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="header-title texth2">
+                <h2>Xin chào, tôi là</h2>
+            </div>
+            <div class="typing-text texth1hhnios">
+                <h1>Ninh (Weans)</h1>
+            </div>
+            <div class="description">
+                Chào mừng bạn đến với Website của Ninh.
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2 class="about-title">Giới thiệu về bản thân</h2><br>
+            <p class="about-description" style="margin: 5px;">
+<b>Tên là:</b> Hoàng Ngọc Hải Ninh<br><br>
+<b>Tên khác:</b> HHNiOS, Weans<br><br>
+
+<b>Giải thích qua về tên khác của mình:</b> HHNiOS là tên mà mn gọi mình trên mạng, đấy là tên viết tắt của mình khi bỏ chữ "Ngọc" trong họ tên của mình. Còn WEANS là lấy từ tên của 1 ca sĩ nhạc rap <a href="https://www.youtube.com/@Weantodale">WEAN</a>, là tác giả của bài hát mà mình từng rất yêu thích, bài hát ấy đã giúp tâm lí mình vượt qua giai đoạn tiêu cực của bản thân về áp lực thi cử, áp lực từ gia đình,... thế nên mình lấy tên của ca sĩ ấy và thêm "s" phía sau vì trong tiếng anh thêm "s" phía sau nghĩa là số nhiều. Anh ấy đã là người tạo cảm hứng và mãi mãi là 1 trong số lí do để mình tiếp tục với đam mê, niềm yêu đối với cuộc sống và qua bài nhạc của anh ấy đã cho mình biết được mục tiêu của mình là gì. Trên hết mình cảm thấy yêu bản thân và yêu cuộc sống đầy khắc nhiệt này nhiều hơn.<br><br>
+
+<b>Sở thích:</b> thích xem Anime, thích học 1 số môn học, nghiện nghe nhạc, thích mua mô hình, thích code dạo, check mã lỗi và lỗ hổng bảo mật của game,...<br><br>
+
+<b>P/s: YÊU THÍCH SỰ TỰ DO VÀ MUỐN ĐƯỢC HOÀN THÀNH ƯỚC MƠ CỦA BẢN THÂN.</b><br><br>
+
+<b>Không thích:</b> không thích các món ăn liên quan đến gia cầm (gà, vịt, ngan, ngỗng,...), không thích tiktok và ngắm gái,...<br><br>
+
+<b>P/s: GHÉT VIỆC PHẢI TRỞ THÀNH NGƯỜI KHÁC, KHÔNG MUỐN ĐỐI MẶT VỚI NHIỀU VẤN ĐỀ.</b><br><br>
+
+<b>Nỗi sợ:</b> sợ ánh nhìn, sợ chỗ đông người, sợ đám đông, sợ sự nổi bật, sợ đại dương,...<br><br>
+<b>Yêu quý và quý trọng tất cả các thầy, các cô:33<br><br>
+YÊU THÍCH ĐẤT NƯỚC NHẬT BẢN VÀ TRONG TƯƠNG LAI TÔI SẼ ĐẾN ĐẤY.</b><br>
+</p>
+</div>
+</section>
+
+<section id="comment" class="about">
+    <div class="about-content">
+<h2 class="about-title">Ae cấp 3 nói về tính cách:)))</h2><br>
+            <p class="about-description" style="margin: 5px;">
+<b>Hải Hiếu Official:</b><br> "mày thay đổi theo thời tiết"<br>
+
+"tính mày khác vs tính bọn t"<br>
+
+"cứ waifu rủ đi chs ko đi"<br>
+
+"mày con trai ko háu gái lắm đk"<br>
+
+"mày cứ con gái kiểu dell j đấy"<br>
+
+"lúc nghiêm túc thì dell nghiêm túc"<br>
+
+"ng khác nói thì ko nắng nghe cứ cãi"<br>
+
+"xong nói lớn tiếng lắm lúc kiểu ko muốn nói nói ra như kiểu chửi nhau"<br>
+"còn nhiều cái nx nhưng dài lắm ko muốn nói"<br>
+
+"rút kinh nghiệm nhá"<br>
+
+"nói thì cứ nói thế chứ vẫn chs vs nhau mà"<br><br>
+
+<b>Tùng Tài Tử:</b><br> "Hoạt bát với những ng đã quen, m k cute đôi khi trẻ trâu, đôi khi làm những hành động mà quên mất đi giới tính."<br><br>
+
+<b>Hiếu Đ:</b><br> "Thì bình thường núc cáu lúc vui lúc râm lúc đầu óc ko bị hf th cho lắm có vài tính khá giống tao!"<br><br>
+
+<b>Phất Bông:</b><br> "mày còn nhiều cái trẻ con tao không muốn nói đâu đấy"<br><br>
+
+<b>Huy L:</b><br> "mày dễ tính, nhiều lúc rẻ jack"<br><br>
+
+<b>Hà Slime:</b><br> "vô duyên" :((((<br><br>
+<b>Cờ rút:</b><br> "Răm" :>>>><br>
+</p>
+<br>
+            </p>
+        </div>
+    </section>
+
+    <section id="playlist" class="about">
+        <div class="about-content">
+    <h2 class="about-title">Danh sách nhạc</h2>
+                <p class="about-description" style="margin: 5px;">
+                    <button class="tab-button" onclick="openTab('tab1')">Nhạc 🇻🇳</button>
+    <button class="tab-button" onclick="openTab('tab2')">Nhạc 🇯🇵</button>
+
+    <div id="tab1" class="tab-content">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=LSysjt858ZN_Vu7Y&amp;list=PL_i5wMTMXzT4hs81ONkzDDKG0DnvLfoLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/videoseries?si=spDh8UgxjQ7kCcWU&amp;list=PL_i5wMTMXzT4bRnL0dLz65hZV8UJ9cBJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+                </p>
+            </div>
+        </section>
+
+
+    <section id="chamngon" class="about">
+        <div class="about-content">
+            <h2 class="about-title">Châm ngôn sống</h2>
+            <p class="about-description" style="margin: 5px;">
+        <div class="owl-carousel owl-theme">
+            <div class="item">Liệu chúng ta đang sống,<br> hay đơn giản chỉ là đang tồn tại?<br><br><b>-HTA-</b></div>
+            <div class="item">Ở nơi vắng vẻ,<br> là nơi chúng ta ít cô đơn nhất.<br><br><b>-Yosuga no Sora-</b></div>
+            <div class="item">Tôi không có thiên phú, nhưng tôi muốn xem xem,<br> một người bình thường mang theo ước mơ rốt cuộc có thể đi được bao xa.<br><br><b>-Sưu tầm-</b></div>
+            <div class="item">Dù thế gian này có tàn nhẫn,<br> thì anh vẫn sẽ mãi yêu em.<br><br><b>-Akuma no Ko-</b></div>
+            <div class="item">
+                Nếu tự s.á.t là cách duy nhất để giải quyết mọi thứ.<br>
+                Thì sinh mạng là thứ rẻ rúng nhất trên cõi đời này.<br><br><b>-HTA-</b></div>
+        </div>        
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <h2 class="contact-title">Liên hệ</h2>
+            <div class="icon-container">
+                <a href="https://www.facebook.com/weansios"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@hhnios5013"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/WeansHHN"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/@hhnios_weans"><i class="fab fa-twitter"></i></a>
+                <a href="https://t.me/Weans_HHN"><i class="fab fa-telegram"></i></a>
+              </div>
+        </div>
+    </section>
+
+
+    <div class="description">
+        <center>Copyright © By HHNiOS(hhnios.site).</center>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1, // Hiển thị một slide tại một thời điểm
+                autoplay: true, // Tự động chuyển slide
+                autoplayTimeout: 10000, // Thời gian hiển thị mỗi slide (3 giây)
+                loop: true, // Lặp lại carousel
+                //animateOut: 'fadeOut', // Hiệu ứng chuyển slide ra
+                //animateIn: 'fadeIn', // Hiệu ứng chuyển slide vào
+            });
+        });
+    </script>
+      
+    
+    <script>
+        // Tự động mở Tab 1 khi trang web được tải
+        window.onload = function() {
+            openTab('tab1');
+        };
+
+        function openTab(tabId) {
+            // Ẩn tất cả các tab content
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+
+            // Hiển thị tab content tương ứng với tabId
+            var tabContent = document.getElementById(tabId);
+            if (tabContent) {
+                tabContent.style.display = "block";
+            }
+        }
+        // JavaScript để hiển thị và ẩn menu popup
+        function toggleMenu() {
+            var popupMenu = document.getElementById("popupMenu");
+            if (popupMenu.style.display === "block") {
+                popupMenu.style.display = "none";
+            } else {
+                popupMenu.style.display = "block";
+            }
+        }
+
+        // JavaScript để cuộn đến các phần của trang web
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                window.scrollTo({
+                    top: section.offsetTop,
+                    behavior: "smooth"
+                });
+                toggleMenu(); // Ẩn menu sau khi chuyển đến phần
+            }
+        }
+
+        // JavaScript để đóng menu popup
+function closeMenu() {
+    var popupMenu = document.getElementById("popupMenu");
+    popupMenu.style.display = "none";
+}
+
+function toggleMode() {
+    const body = document.body;
+    const modeToggle = document.querySelector('.mode-toggle');
+    const currentMode = body.classList.contains('light-mode') ? 'light' : 'dark';
+    const header = document.querySelector('.header');
+
+    if (currentMode === 'light') {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        header.style.backgroundImage = "url('https://github.com/WeansHHN/me/blob/main/wallpaperflare.com_wallpaper%20(2).jpg?raw=true')";
+        modeToggle.style.backgroundColor = 'var(--background-dark)';
+        modeToggle.style.color = 'var(--text-dark)';
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        header.style.backgroundImage = "url('https://images5.alphacoders.com/131/1311994.jpeg')";
+        modeToggle.style.backgroundColor = 'var(--background-light)';
+        modeToggle.style.color = 'var(--text-light)';
+    }
+}
+
+    </script>
+</body>
+</html>
